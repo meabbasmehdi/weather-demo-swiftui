@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		263A41502CF8355A00B7F6C9 /* WeatherDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263A414F2CF8355A00B7F6C9 /* WeatherDay.swift */; };
 		ED475A9C25485F8E005997DF /* SwiftUI_WeatherApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED475A9B25485F8E005997DF /* SwiftUI_WeatherApp.swift */; };
 		ED475A9E25485F8E005997DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED475A9D25485F8E005997DF /* ContentView.swift */; };
 		ED475AA025485F8E005997DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED475A9F25485F8E005997DF /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		263A414F2CF8355A00B7F6C9 /* WeatherDay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDay.swift; sourceTree = "<group>"; };
 		ED475A9825485F8D005997DF /* SwiftUI-Weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SwiftUI-Weather.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED475A9B25485F8E005997DF /* SwiftUI_WeatherApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WeatherApp.swift; sourceTree = "<group>"; };
 		ED475A9D25485F8E005997DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		ED475A9A25485F8D005997DF /* SwiftUI-Weather */ = {
 			isa = PBXGroup;
 			children = (
+				263A414F2CF8355A00B7F6C9 /* WeatherDay.swift */,
 				ED475A9B25485F8E005997DF /* SwiftUI_WeatherApp.swift */,
 				ED475AAB25489E44005997DF /* WeatherButton.swift */,
 				ED475A9D25485F8E005997DF /* ContentView.swift */,
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED475A9E25485F8E005997DF /* ContentView.swift in Sources */,
+				263A41502CF8355A00B7F6C9 /* WeatherDay.swift in Sources */,
 				ED475A9C25485F8E005997DF /* SwiftUI_WeatherApp.swift in Sources */,
 				ED475AAC25489E44005997DF /* WeatherButton.swift in Sources */,
 			);

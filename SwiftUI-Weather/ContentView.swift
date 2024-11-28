@@ -10,9 +10,17 @@ struct ContentView: View {
     
     @State private var isNight = false
     
+    @State private var weatherData = [
+        WeatherDay(dayOfWeek: "TUE", imageName: "cloud.sun.fill", temperature: 74),
+        WeatherDay(dayOfWeek: "WED", imageName: "sun.max.fill", temperature: 88),
+        WeatherDay(dayOfWeek: "THU", imageName: "wind.snow", temperature: 55),
+        WeatherDay(dayOfWeek: "FRI", imageName: "sunset.fill", temperature: 60),
+        WeatherDay(dayOfWeek: "SAT", imageName: "snow", temperature: 25)
+    ]
+    
     var body: some View {
         ZStack {
-            BackgroundView(isNight: isNight)
+            BackgroundView(isNight: $isNight)
             
             VStack {
                 CityTextView(cityName: "Cupertino, CA")
@@ -21,25 +29,11 @@ struct ContentView: View {
                                       temperature: 76)
                 
                 HStack(spacing: 20) {
-                    WeatherDayView(dayOfWeek: "TUE",
-                                   imageName: "cloud.sun.fill",
-                                   temperature: 74)
-                    
-                    WeatherDayView(dayOfWeek: "WED",
-                                   imageName: "sun.max.fill",
-                                   temperature: 88)
-                    
-                    WeatherDayView(dayOfWeek: "THU",
-                                   imageName: "wind.snow",
-                                   temperature: 55)
-                    
-                    WeatherDayView(dayOfWeek: "FRI",
-                                   imageName: "sunset.fill",
-                                   temperature: 60)
-                    
-                    WeatherDayView(dayOfWeek: "SAT",
-                                   imageName: "snow",
-                                   temperature: 25)
+                    ForEach(weatherData) { day in
+                        WeatherDayView(dayOfWeek: day.dayOfWeek,
+                                       imageName: day.imageName,
+                                       temperature: day.temperature)
+                    }
                 }
                 
                 Spacer()
@@ -57,6 +51,7 @@ struct ContentView: View {
         }
     }
 }
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -92,7 +87,7 @@ struct WeatherDayView: View {
 
 struct BackgroundView: View {
     
-    var isNight: Bool
+    @Binding var isNight: Bool
     
     var body: some View {
 //        LinearGradient(gradient: Gradient(colors: [isNight ? .black : .blue, isNight ? .gray : Color("lightBlue")]),
